@@ -18,7 +18,7 @@ export function calcAverageProductPrice(input: Product[]): number {
 
   let average = total / input.length;
 
-  if (total === 0) {
+  if (input.length === 0) {
     return total;
   }
   return Math.round(average * 100) / 100;
@@ -26,6 +26,6 @@ export function calcAverageProductPrice(input: Product[]): number {
 
 calcAverageProductPrice(products);
 
-let calculate = calcAverageProductPrice(products);
+let calculate: number = calcAverageProductPrice(products);
 
 console.log(calculate);
